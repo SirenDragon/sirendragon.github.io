@@ -1,4 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+    background-color: #acacac; /* Fallback color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-section .tagline {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section .btn-primary,
+.contact-section .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.contact-section .btn-primary {
+    background-color: #007bff;
+}
+
+.contact-section .btn-secondary {
+    background-color: #6c757d;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/texture.avif'); /* Background texture */
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.5; /* Adjust the opacity (0.0 to 1.0) */
+    z-index: -1; /* Ensure it stays behind the content */
+    pointer-events: none; /* Prevent interaction with the pseudo-element */
+}
+
 img {
-    width:50%;
-    height:auto;
+    width: 20%;
+    height: auto;
 }
