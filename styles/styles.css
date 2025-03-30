@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     position: relative; /* Ensure the pseudo-element is positioned relative to the body */
-    background-color: #acacac; /* Fallback color */
+    background-color: #988b83; /* Fallback color */
     margin: 0;
     padding: 0;
 }
@@ -85,7 +85,9 @@ nav {
     }
 
     nav a {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 10px;
         text-decoration: none;
         color: #F0E68C; /* Khaki */
@@ -100,11 +102,29 @@ nav {
             color: #556B2F; /* DarkOliveGreen */
         }
 
-    nav a.active {
-        background-color: rgba(240, 230, 140, 0.5); /* Khaki with more opacity */
-        color: #556B2F; /* DarkOliveGreen */
-        font-weight: bold;
+        nav a.active {
+            background-color: rgba(240, 230, 140, 0.5); /* Khaki with more opacity */
+            color: #556B2F; /* DarkOliveGreen */
+            font-weight: bold;
+        }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+nav a:hover i {
+    animation: bounce 0.5s;
+}
 
 .content {
     flex: 1;
@@ -165,6 +185,3 @@ img {
     width: 20%;
     height: auto;
 }
-
-
-
