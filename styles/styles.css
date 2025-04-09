@@ -1,26 +1,9 @@
-/* Define color variables in the :root selector */
-:root {
-    --background-gradient-start: #262026;
-    --background-gradient-end: rgba(2, 21, 25, 0.80);
-    --dark-sea-green: rgba(4, 19, 27, 0.80);
-    --hover-dark-sea-green: #217d83;
-    --header-background: rgba(51, 34, 21, 0.80);
-    --section-background: rgba(51, 51, 51, 0.8);
-    --hover-section-background: rgba(85, 85, 85, 0.5);
-    --text-color: #e0e0e0;
-    --text-color-light: #ffffff;
-    --tagline-color: #d3d3d3;
-    --button-background: rgba(7, 41, 47, 0.80);
-    --button-hover-background: #217d83;
-    --border-color: rgba(4, 19, 27, 0.80);
-}
-
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, var(--background-gradient-start), var(--background-gradient-end));
+    background: linear-gradient(45deg, #262026, rgba(2, 21, 25, 0.80)); /* Gradient background */
     margin: 0;
     padding: 0;
-    color: var(--text-color);
+    color: #e0e0e0;
 }
 
     body::before {
@@ -36,7 +19,7 @@ body {
         opacity: 0.2;
         z-index: -1;
         pointer-events: none;
-        filter: invert(1);
+        filter: invert(1); /* Invert the color of the texture */
     }
 
 .container {
@@ -48,29 +31,29 @@ body {
 .header-section {
     text-align: center;
     margin-bottom: 40px;
-    background-color: var(--header-background);
-    color: var(--text-color-light);
+    background-color: rgba(51, 34, 21, 0.80);
+    color: #ffffff;
     padding: 20px;
     border-radius: 10px;
 }
 
 nav {
-    background: linear-gradient(45deg, var(--background-gradient-start), var(--dark-sea-green));
+    background: linear-gradient(45deg, #262026, rgba(7, 41, 47, 0.80)); /* Gradient background */
 }
 
     nav a.nav-link {
         border-radius: 10px;
-        color: var(--text-color-light) !important;
+        color: #ffffff !important;
     }
 
         nav a.nav-link:hover {
-            background-color: var(--hover-section-background);
-            color: var(--text-color-light) !important;
+            background-color: rgba(85, 85, 85, 0.5);
+            color: #ffffff !important;
         }
 
         nav a.nav-link.active {
-            background-color: var(--hover-section-background);
-            color: var(--text-color-light) !important;
+            background-color: rgba(85, 85, 85, 0.5);
+            color: #ffffff !important;
             font-weight: bold;
         }
 
@@ -80,13 +63,13 @@ nav {
 }
 
     .navbar-brand h1 {
-        color: var(--text-color-light) !important;
+        color: #ffffff !important;
     }
 
 .tagline {
     font-size: 0.9rem;
     margin-top: -10px;
-    color: var(--tagline-color);
+    color: #d3d3d3;
 }
 
 .nav-item {
@@ -119,23 +102,23 @@ section {
     margin-bottom: 40px;
     padding: 20px;
     border-radius: 10px;
-    background-color: var(--section-background);
-    color: var(--text-color-light);
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #ffffff;
 }
 
 .contact-section {
-    background-color: var(--dark-sea-green);
+    background-color: rgba(4, 19, 27, 0.80);
 }
 
 h2 {
     font-size: 2.0rem;
     margin-bottom: 15px;
-    color: var(--text-color-light);
+    color: #ffffff;
 }
 
 .about-section {
-    background-color: var(--dark-sea-green);
-    color: var(--text-color-light);
+    background-color: rgba(4, 19, 27, 0.80); /* Dark Sea Green with opacity */
+    color: #ffffff;
 }
 
 .about-content {
@@ -147,19 +130,19 @@ h2 {
 }
 
     .about-content p {
-        color: var(--text-color);
+        color: #e0e0e0;
     }
 
 .image-section img {
     width: 250px;
     height: auto;
     border-radius: 10px;
-    border: 5px solid var(--border-color);
+    border: 5px solid rgba(4, 19, 27, 0.80); /* Dark Sea Green with opacity */
 }
 
 .skills-section {
-    background-color: var(--dark-sea-green);
-    color: var(--text-color-light);
+    background-color: rgba(4, 19, 27, 0.80); /* Dark Sea Green with opacity */
+    color: #ffffff;
 }
 
     .skills-section ul {
@@ -168,58 +151,58 @@ h2 {
     }
 
         .skills-section ul li {
-            color: var(--text-color);
+            color: #e0e0e0;
             padding: 5px 0;
-            border-bottom: 1px solid var(--text-color-light);
+            border-bottom: 1px solid #ffffff;
         }
 
 .education-section {
-    background-color: var(--dark-sea-green);
-    color: var(--text-color-light);
+    background-color: rgba(4, 19, 27, 0.80); /* Dark Sea Green with opacity */
+    color: #ffffff;
 }
 
     .education-section p {
-        color: var(--text-color);
+        color: #e0e0e0;
     }
 
 .projects-section {
-    background-color: var(--dark-sea-green);
-    color: var(--text-color-light);
+    background-color: rgba(4, 19, 27, 0.80); /* Dark Sea Green with opacity */
+    color: #ffffff;
 }
 
 .project-box {
-    background-color: var(--section-background);
+    background-color: rgba(51, 51, 51, 0.8);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    cursor: pointer; /* Indicate that the project title is clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
     .project-box:hover {
-        background-color: var(--hover-section-background);
+        background-color: rgba(85, 85, 85, 0.5); /* Change background color on hover */
     }
 
     .project-box h3 {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: var(--text-color-light);
+        color: #ffffff;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .project-box p {
-        color: var(--text-color);
+        color: #e0e0e0;
     }
 
     .project-box .fa-chevron-down {
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease; /* Smooth transition for rotation */
     }
 
     .project-box .collapse.show .fa-chevron-down {
-        transform: rotate(90deg);
+        transform: rotate(90deg); /* Rotate arrow 90 degrees when dropdown is open */
     }
 
 .custom-btn {
@@ -227,8 +210,8 @@ h2 {
     padding: 10px 20px;
     margin: 5px;
     font-size: 1rem;
-    color: var(--text-color-light);
-    background-color: var(--button-background);
+    color: #ffffff;
+    background-color: rgba(7, 41, 47, 0.80);
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -236,7 +219,7 @@ h2 {
 }
 
     .custom-btn:hover {
-        background-color: var(--button-hover-background);
+        background-color: #217d83;
     }
 
 /* Custom styles for the hamburger menu icon */
@@ -245,5 +228,5 @@ h2 {
 }
 
 .navbar-light .navbar-toggler {
-    border: 1px solid var(--text-color-light);
+    border: 1px solid white;
 }
